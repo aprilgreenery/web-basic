@@ -40,6 +40,49 @@
           padding: 1.5em .75rem;
           padding-left: 3em;
         }
+        .v-line{
+          border-right: 0.2px solid rgb(177, 177, 177);
+        }
+        .navbar-brand {
+          font-size: 0.9em;
+        }
+        .nav-item.nav-link.active{
+          border-bottom: 0.1em solid black
+        }
+        .nav-link.active{
+          color:black;
+        }
+        .navbar-expand-lg .navbar-nav .nav-link {
+        padding-right: 1rem;
+        }
+        .collapse.navbar-collapse{
+          padding-left: 1rem;
+          font-size: 0.9em;
+          overflow: auto;
+          white-space: nowrap;
+        }
+        .nav-item.nav-link{
+          display:inline-block;
+        }
+        
+        ::-webkit-scrollbar{
+          height: 5px;
+          
+        }
+        ::-webkit-scrollbar-track{
+          background: white;
+        }
+
+        ::-webkit-scrollbar-thumb{
+          background: rgb(201, 201, 201);
+          border-radius: 5px;
+        }
+        #nav-con{
+          padding:0;
+        }
+        .bg-light {
+        background-color: white!important;
+        }
    </style> 
 
 
@@ -116,6 +159,30 @@
       </nav>
     </div>
   </div>
+  <div class="v-line">
+    <a class="navbar-brand nav-item nav-link active" href="">Editorial<span class="sr-only">(current)</span></a>
+  </div> 
+    <div class="collapse navbar-collapse">
+      <div class="navbar-nav">
+        <a class="nav-item nav-link" href="https://unsplash.com/t/wallpapers">Wallpapers</a>
+        <a class="nav-item nav-link" href="https://unsplash.com/t/textures-patterns">Textures & Patterns</a>
+        <a class="nav-item nav-link" href="https://unsplash.com/t/nature">Nature</a>
+        <a class="nav-item nav-link" href="https://unsplash.com/t/current-events">Current Events</a>
+        <a class="nav-item nav-link" href="https://unsplash.com/t/architecture">Architecture</a>
+        <a class="nav-item nav-link" href="https://unsplash.com/t/business-work">Business & Work</a>
+        <a class="nav-item nav-link" href="https://unsplash.com/t/animals">Animals</a>
+        <a class="nav-item nav-link" href="https://unsplash.com/t/travel">Travel</a>
+        <a class="nav-item nav-link" href="https://unsplash.com/t/fashion">Fashion</a>
+        <a class="nav-item nav-link" href="https://unsplash.com/t/food-drink">Food & Drink</a>
+        <a class="nav-item nav-link" href="https://unsplash.com/t/spirituality">Spirituality</a>
+        <a class="nav-item nav-link" href="https://unsplash.com/t/experimental">Experimental</a>
+        <a class="nav-item nav-link" href="https://unsplash.com/t/people">People</a>
+        <a class="nav-item nav-link" href="https://unsplash.com/t/health">Health</a>
+        <a class="nav-item nav-link" href="https://unsplash.com/t/arts-culture">Arts & Culture</a>
+      </div>
+    </div>
+  </nav>
+</div>
       
 
     <!-- Optional JavaScript -->
