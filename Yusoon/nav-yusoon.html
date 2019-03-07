@@ -1,0 +1,131 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <script type="text/javascript" src="https://cdn.rawgit.com/asvd/dragscroll/master/dragscroll.js"></script>
+      <style>
+        .form-group{
+          margin: 1rem;
+        }
+        .form-control {
+          display: inline-block;
+          font-size: 0.8rem;
+          color: #495057;
+          background-color: #efefef;
+          border: 1px solid white;
+          border-radius: 1rem;
+          padding: 1.5em .75rem;
+          padding-left: 3em;
+        }
+        .btn {    
+          color: #838383;          
+          background-color: white;
+          border: 1px solid rgb(201, 201, 201);         
+          font-size: 0.8rem
+        }
+        .btn-outline-light:hover {
+          color: #212529;
+          background-color: #ffffff;
+          border-color: rgb(133, 133, 133); 
+        }
+        .v-line{
+          border-right: 0.2px solid rgb(177, 177, 177);
+        }
+        .navbar-brand {
+          font-size: 0.8em;
+        }
+        .nav-item.nav-link.active{
+          border-bottom: 0.1em solid black
+        }
+        .nav-link.active{
+          color:black;
+        }
+        .navbar-expand-lg .navbar-nav .nav-link {
+        padding-right: 1rem;
+        }
+        .collapse.navbar-collapse{
+          padding-left: 1rem;
+          font-size: 0.8em;
+          overflow: auto;
+          white-space: nowrap;
+        }
+        .nav-item.nav-link{
+          display:inline-block;
+        }
+        
+        ::-webkit-scrollbar{
+          height: 5px;
+          
+        }
+        ::-webkit-scrollbar-track{
+          background: white;
+        }
+
+        ::-webkit-scrollbar-thumb{
+          background: rgb(201, 201, 201);
+          border-radius: 5px;
+        }
+        #nav-con{
+          padding:0;
+        }
+        .bg-light {
+        background-color: white!important;
+        }
+      </style>
+      </head>
+    <body>
+        <table>
+            <tr>
+            <td><img width="65px;" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFsAAABbCAMAAAAr6AmrAAAAQlBMVEX///8pKSnGxsYKCgomJiY1NTX09PTf39/KysoAAADY2NiTk5P39/cZGRnx8fHp6ekSEhJSUlJJSUmjo6MhISE6Ojpcg8gxAAAAmklEQVRoge3Xyw7CIBBG4XIpFm0rVnz/V3U7oNaSTjTR823/5CyZ0HUAAOC/jaGi2F6iK/hRr33JRvI9bdq0v95e0iQlo9i+nip6aeCFN+dxz/U85F7w52qeb3LOQ1s7esE9tE0xN7adfD/Sk7aYadOmvbUd9NqTPZYGvbaJNZne2V5Hmzbtz7SrD/yqaJvawbaYm9oAAOAH3AEywxAztdH0HAAAAABJRU5ErkJggg==" title="Unsplash Home"></td>
+            <td><span title="Home ─ Unsplash"><b>Unsplash</b><br>Photos for everyone</span></td>
+            <td><div class="form-group"><form>
+                <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Search free high-resolution photos" size="50" title="Search Unsplash"></form>
+                </div>
+            </td>
+            <td>
+                <nav class="navbar navbar-expand-lg navbar-light bg-light" id="nav-con">
+                    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                      <div class="navbar-nav">
+                        <a class="nav-item nav-link" href="#">Collections</a>
+                        <a class="nav-item nav-link" href="#">Explore</a>
+                        <a class="nav-item nav-link" href="#">···</a>
+                      </div>
+                    </div>
+                  </nav>
+            </td>
+            <td>
+              <button type="button" class="btn btn-outline-light">Submit a photo</button>
+            </td>
+            </tr>
+        </table>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+          <div class="v-line">
+            <a class="navbar-brand nav-item nav-link active" href="">Editorial<span class="sr-only">(current)</span></a>
+          </div> 
+            <div class="collapse navbar-collapse">
+              <div class="navbar-nav">
+                <a class="nav-item nav-link" href="https://unsplash.com/t/wallpapers">Wallpapers</a>
+                <a class="nav-item nav-link" href="https://unsplash.com/t/textures-patterns">Textures & Patterns</a>
+                <a class="nav-item nav-link" href="https://unsplash.com/t/nature">Nature</a>
+                <a class="nav-item nav-link" href="https://unsplash.com/t/current-events">Current Events</a>
+                <a class="nav-item nav-link" href="https://unsplash.com/t/architecture">Architecture</a>
+                <a class="nav-item nav-link" href="https://unsplash.com/t/business-work">Business & Work</a>
+                <a class="nav-item nav-link" href="https://unsplash.com/t/animals">Animals</a>
+                <a class="nav-item nav-link" href="https://unsplash.com/t/travel">Travel</a>
+                <a class="nav-item nav-link" href="https://unsplash.com/t/fashion">Fashion</a>
+                <a class="nav-item nav-link" href="https://unsplash.com/t/food-drink">Food & Drink</a>
+                <a class="nav-item nav-link" href="https://unsplash.com/t/spirit`uality">Spirituality</a>
+                <a class="nav-item nav-link" href="https://unsplash.com/t/experimental">Experimental</a>
+                <a class="nav-item nav-link" href="https://unsplash.com/t/experimental">People</a>
+                <a class="nav-item nav-link" href="https://unsplash.com/t/experimental">Health</a>
+                <a class="nav-item nav-link" href="https://unsplash.com/t/experimental">Arts & Culture</a>
+              </div>
+            </div>
+          </nav>
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    </body>
+</html>
