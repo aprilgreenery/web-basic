@@ -1,0 +1,97 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>0309_Assignment</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <style>
+        .wholeArea{
+            display: block;
+            width: 400px;
+            margin: auto;
+        }
+        .imgArea{
+            display:inline-block;
+            position:relative;
+            width: 300px;
+            height: 350px;
+        }
+        .btnArea{
+            margin-left: 50px;
+            display:inline-block;
+        }
+        button{    
+            display: block;
+            margin-top: 95px;
+        }
+        img{
+            display:inline-block;
+            position:absolute;
+            width: 100%;
+            height: 100%;
+        }
+        @media screen and (max-width: 600px){
+            .btnArea{
+            display:block;
+            margin:auto;
+            height:50px;
+        }
+            .wholeArea{
+            display: block;
+            width: 300px;
+            margin: auto;
+        }
+            .imgArea{
+            display:inline-block;
+            position:relative;
+            width: 300px;
+            height: 350px;
+            margin-top:50px;
+        }
+            button{
+            display: inline-block;
+            margin-top:30px;
+            margin:20px;
+        }
+        }
+        </style>
+    </head>
+    <body>
+    <div class="wholeArea">
+        <div class="imgArea">
+            <img src="flowers/birthday.jpg" class="flowerd">
+            <img src="flowers/elegant.jpg" class="flowerc">
+            <img src="flowers/flower.jpg" class="flowerb">
+            <img src="flowers/작약.jpg" class="flowera">
+        </div>
+        <div class="btnArea">
+            <button type="button" class="btnA">1</button>
+            <button type="button" class="btnB">2</button>
+            <button type="button" class="btnC">3</button>
+            <button type="button" class="btnD">4</button>
+        </div>
+    </div>
+    <script>
+        $(".btnA").click(function(e){
+            e.preventDefault();
+        $(".flowera").show();
+        $(".flowerb, .flowerc, .flowerd").hide();
+        });
+        $(".btnB").click(function(e){
+            e.preventDefault();
+        $(".flowerb").show();
+        $(".flowera, .flowerc, .flowerd").hide();
+        });
+        $(".btnC").click(function(e){
+            e.preventDefault();
+        $(".flowerc").show();
+        $(".flowera, .flowerb, .flowerd").hide();
+        });
+        $(".btnD").click(function(e){
+            e.preventDefault();
+        $(".flowerd").show();
+        $(".flowera, .flowerb, .flowerc").hide();
+        });
+    </script>
+    </body>
+</html>
