@@ -1,0 +1,112 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>title</title>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+        <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
+        <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+        <style>
+        .mdl-layout {
+            position:fixed;
+            height: 70px;
+            overflow:hidden;
+            z-index: 200;
+        }
+        .mdl-layout__header-row {
+            padding-left: 20px;
+        }
+        .mdl-layout__header-row .mdl-navigation__link {
+            padding: 0 10px;
+        }
+        .mdl-layout-title {
+            margin-right: 20px;
+        }
+        .mdl-layout__header {
+            background-color: rgb(46, 55, 62);
+        }
+        .search_form{
+            width: 150px;
+            margin: 10px;
+        }
+        .mdl-button--raised.mdl-button--colored {
+            background: rgba(63,81,181,0);
+        }
+        .login_area{
+            width: 100%;
+            height: 600px;
+            text-align: center;
+            display: inline-block;
+        }
+        .mlogo{
+           margin-top: 100px;
+           margin-left: auto;
+           margin-right: auto;
+           display: block;
+           border-radius: 10px;
+        }
+        .mdl-checkbox.is-checked .mdl-checkbox__box-outline {
+            border: 1px solid rgb(63,81,181);
+        }
+        .mdl-checkbox.mdl-js-checkbox{
+            width: 130px;
+            margin-bottom: 30px;
+        }
+        </style>
+    </head>
+    <body>
+    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+            <header class="mdl-layout__header">
+                <div class="mdl-layout__header-row">
+                <!-- Title -->
+                <span class="mdl-layout-title">FDS</span>
+                <!-- Navigation. We hide it in small screens. -->
+                <nav class="mdl-navigation mdl-layout--large-screen-only">
+                    <a class="mdl-navigation__link" href="0312_과제_home.html">Home</a>
+                    <a class="mdl-navigation__link" href="0312_과제_album.html">Album</a>
+                    <a class="mdl-navigation__link" href="">Dash Board</a>
+                </nav>
+                <div class="mdl-layout-spacer"></div>
+                <div class="search_form">
+                <form action="#">
+                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable">
+                        <label class="mdl-button mdl-js-button mdl-button--icon" for="sample6">
+                        <i class="material-icons">search</i>
+                        </label>
+                        <div class="mdl-textfield__expandable-holder">
+                        <input class="mdl-textfield__input" type="text" id="sample6">
+                        <label class="mdl-textfield__label" for="sample-expandable">Expandable Input</label>
+                        </div>
+                    </div>
+                    </form>
+                </div>
+                <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">
+                    SEARCH
+                </button>
+                </div>
+            </header>
+        </div>
+        <div class="login_area">
+            <img src="mlogo.png" class="mlogo" width=100px;>
+            <h4>Please sign in</h4>
+            <form action="#">
+                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                      <input class="mdl-textfield__input" type="text" id="sample3">
+                      <label class="mdl-textfield__label" for="sample3">Email address</label>
+                    </div>
+            </form>
+            <form action="#">
+                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                      <input class="mdl-textfield__input" type="text" id="sample3">
+                      <label class="mdl-textfield__label" for="sample3">Password</label>
+                    </div>
+            </form>
+            <label class = "mdl-checkbox mdl-js-checkbox" for = "checkbox1">
+                    <input type = "checkbox" id = "checkbox1" 
+                       class = "mdl-checkbox__input">
+                    <span class = "mdl-checkbox__label">Remember me</span>
+            </label>
+            <p>© 2017-2019</p>
+        </div>
+    </body>
+    </html>
