@@ -9,14 +9,7 @@
       integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
       crossorigin="anonymous"
     />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/icon?family=Material+Icons"
-    />
-    <link
-      rel="stylesheet"
-      href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css"
-    />
+
     <style media="screen">
       .carousel-item {
         width: 100%;
@@ -34,6 +27,7 @@
       .d-flex {
         margin: 50px;
         box-sizing: border-box;
+        display: inline-block;
       }
       .rounded {
         width: 400px;
@@ -48,13 +42,10 @@
 
     <title>AURORA</title>
   </head>
-  <body id="back-to-top" class="bg-light text-dark">
-    <!-- add logo top-left -->
-    <!-- add menu top-left -->
-    <!-- add search and button top-left -->
+  <body class="bg-light text-dark">
     <div class="fixed-top text-light">
       <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand text-success" href="#">AURORA</a>
+        <a class="navbar-brand text-success" href="home.html">AURORA</a>
         <button
           class="navbar-toggler"
           type="button"
@@ -70,11 +61,13 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
-              <a class="nav-link" href="#"
+              <a class="nav-link" href="home.html"
                 >Home <span class="sr-only">(current)</span></a
               >
             </li>
-            <li class="nav-item"><a class="nav-link" href="#">Album</a></li>
+            <li class="nav-item">
+              <a class="nav-link" href="album.html">Album</a>
+            </li>
           </ul>
           <form class="form-inline my-2 my-lg-0">
             <input
@@ -119,6 +112,9 @@
               <p>
                 sit amet, sed do eiusmod tempor incididunt dolore magna aliqua.
               </p>
+              <a class="btn btn-outline-success" href="#" role="button"
+                >Sign In Now</a
+              >
             </div>
           </div>
           <div class="carousel-item">
@@ -130,6 +126,9 @@
             <div class="carousel-caption d-none d-md-block text-center">
               <h3>Lofoten, Norway</h3>
               <p>laboris nisi ut aliquip ex ea commodo consequat.</p>
+              <a class="btn btn-outline-success" href="#" role="button"
+                >Sign In Now</a
+              >
             </div>
           </div>
           <div class="carousel-item">
@@ -143,6 +142,9 @@
               <p>
                 in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
               </p>
+              <a class="btn btn-outline-success" href="#" role="button"
+                >Sign In Now</a
+              >
             </div>
           </div>
         </div>
@@ -256,10 +258,6 @@
     <hr />
     <p>© 2017-2019 Sooyoung Jeong. · Privacy · Terms</p>
 
-    <!-- copyrights bottom-left -->
-
-    <!-- back to top link bottom-right -->
-
     <!-- jq -->
     <script
       src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
@@ -276,6 +274,5 @@
       integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
       crossorigin="anonymous"
     ></script>
-    <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
   </body>
 </html>
