@@ -1,0 +1,133 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>인생역전 로또</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    </head>
+    <style>
+     body{
+        background: url("https://previews.123rf.com/images/kikujungboy/kikujungboy1402/kikujungboy140200024/25755364-south-korean-won-currency.jpg") no-repeat;
+        background-size: cover;
+        background-color: rgb(133, 133, 133);
+        background-blend-mode: multiply;
+    } 
+    #wrapper{
+        text-align:center;
+        margin-top: 100px;
+    }
+    #num-list{
+        display: inline-block;
+        text-align: center;
+    }
+    tr{
+        display:inline-block;
+    }
+    td{
+        width: 30px;
+        background-color: rgba(255,255,255,0.5);
+        margin-bottom: 5px;
+    }
+    .card{
+        display:inline-block;
+        margin: 40px 0;
+    }
+    .card-body{
+        margin-top: 20px;
+        text-align: center;
+    }
+    #cost{
+        margin: 30px 0;
+    }
+    </style>
+    <body>
+
+        <div id="wrapper">
+        <form action="#" id="form">
+        <input type="text" id="games" autocomplete="off" placeholder="게임 횟수를 입력">
+        <button type="submit" class="btn btn-success">로또 번호 뽑기!</button>
+        </form>
+        <div class="card" style="width: 400px;">
+            <img src="https://images.unsplash.com/photo-1518688248740-7c31f1a945c4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80" class="card-img-top" alt="lotto">
+            <div class="card-body">
+                <div id="printArea">
+                <h5 class="card-title">~당신의 행운의 숫자들~</h5>
+                <p class="card-text">
+                    <table cellpadding="10px" id="num-list">
+
+                    </table>
+                </p>
+                </div>
+                <a href="#" class="btn btn-primary">다시 뽑기</a>
+                <a href="#" class="btn btn-outline-secondary">결과 출력</a>
+                <h5 id="cost"></h5>
+            </div>
+        </div>
+        
+        </div>
+
+<script type="text/javascript">
+
+        $(".card").hide();
+
+        $("form").submit(function(e){
+        e.preventDefault();
+        var t = $("#games").val();    
+        for(i=0; i<t; i++){
+        var numbers=[];
+        while(numbers.length < 6){
+            var num = Math.floor((Math.random()*45)+1);
+            if(numbers.indexOf(num) == -1){
+                numbers.push(num);
+            }
+        }
+        numbers.sort(function(a,b){return a-b});
+        $("#num-list").append('<tr>'+
+                              '<td>☞</td>'+
+                              '<td>'+numbers[0]+'</td>'+
+                              '<td>'+numbers[1]+'</td>'+
+                              '<td>'+numbers[2]+'</td>'+
+                              '<td>'+numbers[3]+'</td>'+
+                              '<td>'+numbers[4]+'</td>'+
+                              '<td>'+numbers[5]+'</td>'+
+                              '</tr>');
+        $(".card").addClass("list");
+        $("#games").val("");
+        $("#cost").text("총 "+(1000*t)+"원입니다!");
+        $(".card").show();
+        }}
+    );
+        $(".btn.btn-primary").click(function(e){
+            e.preventDefault();
+            $(".card").hide();
+            $("#num-list").html("");
+            $(".card").removeClass("list")
+            $("#cost").text("");
+        });
+    
+    function print(printArea){
+        win = window.open();
+        self.focus();
+        win.document.open();
+        win.document.write('<html><head><title>로또번호 프린트</title><style>');
+        win.document.write('body{text-align:center;} #printArea{display:inline-block;} #num-list{display:inline-block;}');
+        win.document.write('</style></head><body>');
+        win.document.write(printArea);
+        win.document.write('</body></html>');
+        win.document.close();
+        win.print();
+        win.close();
+    }
+
+    $(".btn.btn-outline-secondary").click(function(){
+        print(document.getElementById('printArea').innerHTML);
+    });
+     
+
+</script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    </body>
+</html>
